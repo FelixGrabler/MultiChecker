@@ -9,19 +9,19 @@ This project is a simple, modular learning platform built with plain HTML, CSS, 
 ### 1. Multiple Choice
 Presents a series of questions with multiple answers. You can select answers using checkboxes and see which ones are correct or incorrect after clicking "Next".
 
-- Questions are defined in `data/questions.txt`
+- Questions are defined in [data/questions.txt](data/questions.txt)
 - Correct answers are marked with an asterisk (`*`) at the beginning of the line
 
 ### 2. Definitions (Quizlet-style)
 More flexible question style, website cannot check answer. Given is some text, and the user can reveal the answer which can be text and/or image.
 
-- Cards are stored in `data/flashcards.json`
+- Cards are stored in [data/flashcards.json](data/flashcards.json)
 - Supports text and images
 
 ### 3. Example Exercises
 Displays practical tasks as images with solution images. This is meant for long tasks, but can also be used for anything.
 
-- Tasks are listed in `data/examples.json`
+- Tasks are listed in [data/examples.json](data/examples.json)
 - Each entry has a title, task image, and solution image
 
 ---
