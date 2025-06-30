@@ -1,0 +1,16 @@
+[
+  {
+    "question": "Was ist ein DEA? (Definition)",
+    "answer": "Ein deterministischer endlicher Automat ist ein ...",
+    "image": "dea.png"
+  },
+  {
+    "question": "Was ist ein NEA? (Definition)",
+    "answer": "Ein nichtdeterministischer endlicher Automat ist ein ...",
+    "image": "nea.png"
+  },
+  {
+    "question": "Was ist eine Turingmaschine? (Definition)",
+    "answer": "Eine Turingmaschine ist ein 7 Tupel, ..."
+  }
+]

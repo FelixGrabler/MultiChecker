@@ -1,0 +1,36 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 20px;
+  background-color: #f8f8f8;
+  color: #333;
+}
+nav {
+  background: #e0e0e0;
+  padding: 10px;
+  margin-bottom: 20px;
+}
+nav a {
+  margin: 0 10px;
+  text-decoration: none;
+  color: #0066cc;
+}
+main {
+  max-width: 800px;
+  margin: auto;
+}
+button {
+  margin: 10px 5px;
+  padding: 8px 16px;
+  cursor: pointer;
+}
+.correct {
+  color: green;
+  font-weight: bold;
+}
+.incorrect {
+  color: red;
+  font-weight: bold;
+}
+#controls {
+  margin-top: 20px;
+}
