@@ -1,15 +1,62 @@
-A cognitive walkthrough is a
-	*usability inspection method
-	usability testing method
-	*task-oriented walkthrough, imagining users' thoughts and actions
-	walkthrough where users apply cognition to solve a task
-	walkthrough based on users thinking aloud
+Welche Aussagen zu DEA sind korrekt?
+	*Ein DEA akzeptiert genau eine Folgezustandsfunktion.
+	*Jeder DEA ist ein Spezialfall eines NEA.
+	Jeder NEA kann effizient in einen DEA umgewandelt werden (ohne exponentiellen Overhead).
+	DEA und NEA akzeptieren unterschiedlich viele Sprachen.
+	DEAs können kontextfreie Sprachen erkennen.
 
-A diary study
-	*involves self-reporting of activities by users
-	*provides insight into how software is used
-	*is a exploratory evaluation method
-	is a predictive evaluation method
-	is a summative evaluation method
-	is a formative evaluation method
-	involves time-consuming manual analysis of user sessions
+Was beschreibt ein NEA korrekt?
+	*Ein NEA erlaubt mehrere Folgezustände für ein Symbol.
+	Ein NEA erkennt andere Sprachen als ein DEA.
+	*Ein NEA kann mit Epsilon-Übergängen arbeiten.
+	NEAs sind effizienter in der Umsetzung als DEAs.
+	NEAs können keine regulären Sprachen erkennen.
+
+Was gilt für reguläre Sprachen?
+	*Sie sind durch endliche Automaten erkennbar.
+	*Sie können durch reguläre Ausdrücke beschrieben werden.
+	Sie sind Turing-erkennbar, aber nicht entscheidbar.
+	*Sie sind abgeschlossen unter Vereinigung.
+	Sie sind abgeschlossen unter Komplement nur bei DEA, nicht bei NEA.
+
+Welche Aussagen über das Pumping-Lemma sind korrekt?
+	*Es dient zum Nachweis, dass eine Sprache nicht regulär ist.
+	*Das Pumping-Lemma gilt für alle regulären Sprachen.
+	Es kann verwendet werden, um zu zeigen, dass eine Sprache regulär ist.
+	Es liefert einen Algorithmus zur Konstruktion eines DEA.
+	Das Pumping-Lemma funktioniert nur bei kontextfreien Sprachen.
+
+Welche Aussagen über kontextfreie Sprachen (KFS) sind korrekt?
+	*Jede reguläre Sprache ist auch kontextfrei.
+	*Es gibt kontextfreie Sprachen, die nicht regulär sind.
+	Alle kontextfreien Sprachen sind deterministisch erkennbar.
+	Kontextfreie Sprachen sind abgeschlossen unter Schnitt.
+	*Kontextfreie Sprachen sind abgeschlossen unter Konkatenation.
+
+Was ist ein regulärer Ausdruck?
+	*Ein formales Mittel zur Beschreibung regulärer Sprachen.
+	*Ein Ausdruck, der durch Mengenoperationen auf Symbolen aufgebaut ist.
+	Ein Automat, der Eingaben verarbeitet.
+	Ein Grammatiktyp aus der Chomsky-Hierarchie.
+	Ein Turing-vollständiges Modell.
+
+Welche Aussagen zu endlichen Automaten sind korrekt?
+	*Ein endlicher Automat hat eine endliche Anzahl an Zuständen.
+	Ein endlicher Automat benötigt immer einen Stack.
+	Endliche Automaten können alle Turing-erkennbaren Sprachen verarbeiten.
+	*Ein DEA kann als Tupel (Q, Σ, δ, q₀, F) definiert werden.
+	*Endliche Automaten verarbeiten Zeichenketten symbolweise.
+
+Welche Sprache ist nicht regulär?
+	Die Menge aller Wörter mit gerader Länge über {a, b}.
+	Die Sprache {aⁿbⁿ | n ≥ 0}.
+	*Die Sprache {aⁿbⁿ | n ≥ 0}.
+	Die Menge aller Wörter ohne zwei aufeinanderfolgende b.
+	*Die Sprache L = {ww | w ∈ {a, b}*}.
+
+Was bedeutet Äquivalenz zweier Automaten?
+	Sie haben die gleiche Anzahl an Zuständen.
+	Sie akzeptieren dieselbe Sprache.
+	Sie sind deterministisch.
+	Sie verwenden dieselbe Eingabealphabet.
+	*Sie akzeptieren genau dieselben Wörter.

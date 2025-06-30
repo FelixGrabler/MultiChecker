@@ -3,6 +3,16 @@ let current = 0;
 let revealed = false;
 let score = 0;
 
+// Fisher-Yates shuffle algorithm
+function shuffleArray(array) {
+  const shuffled = [...array];
+  for (let i = shuffled.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
+  }
+  return shuffled;
+}
+
 fetch("data/questions.txt")
   .then((res) => res.text())
   .then((text) => {
@@ -11,23 +21,28 @@ fetch("data/questions.txt")
     questions = blocks.map((block, blockIndex) => {
       const lines = block.trim().split("\n");
       console.log(`Block ${blockIndex}:`, lines);
+      const answers = lines.slice(1).map((a) => {
+        const trimmedAnswer = a.trim();
+        const isCorrect = trimmedAnswer.startsWith("*");
+        const text = isCorrect
+          ? trimmedAnswer.substring(1).trim()
+          : trimmedAnswer;
+        console.log(
+          `Answer: "${a}" -> trimmed: "${trimmedAnswer}" -> isCorrect: ${isCorrect} -> text: "${text}"`
+        );
+        return {
+          text: text,
+          correct: isCorrect,
+          checked: false,
+        };
+      });
+
+      // Shuffle the answers for this question
+      const shuffledAnswers = shuffleArray(answers);
+
       return {
         question: lines[0],
-        answers: lines.slice(1).map((a) => {
-          const trimmedAnswer = a.trim();
-          const isCorrect = trimmedAnswer.startsWith("*");
-          const text = isCorrect
-            ? trimmedAnswer.substring(1).trim()
-            : trimmedAnswer;
-          console.log(
-            `Answer: "${a}" -> trimmed: "${trimmedAnswer}" -> isCorrect: ${isCorrect} -> text: "${text}"`
-          );
-          return {
-            text: text,
-            correct: isCorrect,
-            checked: false,
-          };
-        }),
+        answers: shuffledAnswers,
       };
     });
 
