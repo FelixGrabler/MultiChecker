@@ -1,0 +1,15 @@
+A cognitive walkthrough is a
+	*usability inspection method
+	usability testing method
+	*task-oriented walkthrough, imagining users' thoughts and actions
+	walkthrough where users apply cognition to solve a task
+	walkthrough based on users thinking aloud
+
+A diary study
+	*involves self-reporting of activities by users
+	*provides insight into how software is used
+	*is a exploratory evaluation method
+	is a predictive evaluation method
+	is a summative evaluation method
+	is a formative evaluation method
+	involves time-consuming manual analysis of user sessions
