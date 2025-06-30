@@ -60,8 +60,6 @@ project-root/
 
 ### Option 1: Use via GitHub Pages
 
-### Option 1: Use via GitHub Pages
-
 You can access the project directly online without any setup:
 
 [felixgrabler.github.io/MultiChecker](https://felixgrabler.github.io/MultiChecker/)
