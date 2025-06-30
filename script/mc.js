@@ -13,52 +13,68 @@ function shuffleArray(array) {
   return shuffled;
 }
 
-fetch("data/questions.txt")
-  .then((res) => res.text())
-  .then((text) => {
-    const blocks = text.split(/\n(?=\S)/);
-    console.log("Blocks found:", blocks.length);
-    questions = blocks.map((block, blockIndex) => {
-      const lines = block.trim().split("\n");
-      console.log(`Block ${blockIndex}:`, lines);
+// Dynamisch die Dateiliste aus index.json laden
+fetch("data/questions/index.json")
+  .then((res) => res.json())
+  .then((fileList) => {
+    const listContainer = document.getElementById("source-list");
+    fileList.forEach((file) => {
+      const label = document.createElement("label");
+      const checkbox = document.createElement("input");
+      checkbox.type = "checkbox";
+      checkbox.value = file;
+      checkbox.checked = true;
+      label.appendChild(checkbox);
+      label.appendChild(document.createTextNode(" " + file));
+      listContainer.appendChild(label);
+      listContainer.appendChild(document.createElement("br"));
+    });
+
+    document.getElementById("load-selected").addEventListener("click", () => {
+      const selectedFiles = [
+        ...listContainer.querySelectorAll("input:checked"),
+      ].map((cb) => cb.value);
+      loadAndParseQuestions(selectedFiles);
+    });
+  });
+
+function loadAndParseQuestions(files) {
+  console.log("Loading questions from:", files);
+  Promise.all(
+    files.map((file) =>
+      fetch("data/questions/" + file).then((res) => res.text())
+    )
+  ).then((contents) => {
+    const allBlocks = contents.flatMap((text) =>
+      text.split(/\n(?=\S)/).map((block) => block.trim())
+    );
+    questions = allBlocks.map((block, blockIndex) => {
+      const lines = block.split("\n");
       const answers = lines.slice(1).map((a) => {
-        const trimmedAnswer = a.trim();
-        const isCorrect = trimmedAnswer.startsWith("*");
-        const text = isCorrect
-          ? trimmedAnswer.substring(1).trim()
-          : trimmedAnswer;
-        console.log(
-          `Answer: "${a}" -> trimmed: "${trimmedAnswer}" -> isCorrect: ${isCorrect} -> text: "${text}"`
-        );
+        const trimmed = a.trim();
+        const isCorrect = trimmed.startsWith("*");
+        const text = isCorrect ? trimmed.slice(1).trim() : trimmed;
         return {
           text: text,
           correct: isCorrect,
           checked: false,
         };
       });
-
-      // Shuffle the answers for this question
-      const shuffledAnswers = shuffleArray(answers);
-
       return {
         question: lines[0],
-        answers: shuffledAnswers,
+        answers: shuffleArray(answers),
       };
     });
 
-    // Log summary of correct/incorrect answers per question
-    questions.forEach((q, i) => {
-      const correctCount = q.answers.filter((a) => a.correct).length;
-      const incorrectCount = q.answers.filter((a) => !a.correct).length;
-      console.log(
-        `Question ${
-          i + 1
-        }: ${correctCount} correct, ${incorrectCount} incorrect answers`
-      );
-    });
-
+    // Reset state
+    current = 0;
+    revealed = false;
+    score = 0;
+    document.getElementById("question-sources").style.display = "none";
+    document.getElementById("controls").style.display = "block";
     render();
   });
+}
 
 function render() {
   const container = document.getElementById("quiz-container");

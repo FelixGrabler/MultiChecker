@@ -1,13 +1,20 @@
 # 📁 Data Folder
 
 This folder contains the content used by the learning interface.  
-Each file serves a specific mode: Multiple Choice, Definitions, or Example Exercises.
+Each file/folder serves a specific mode: Multiple Choice, Definitions, or Example Exercises.
 
 ---
 
-## [questions.txt](questions.txt)
+## [questions/](questions/) folder
 
 Used in the **Multiple Choice** mode (`index.html`).
+
+This folder contains multiple question files organized by topic, allowing you to practice specific areas:
+
+- **[index.json](questions/index.json)**: Lists all available question files
+- **Question files** (e.g., `questions1.txt`, `questions2.txt`): Individual question sets
+
+### Question File Format:
 
 - Each question block starts with the question text
 - Each answer is indented with a tab (`\t`)
@@ -15,7 +22,14 @@ Used in the **Multiple Choice** mode (`index.html`).
 - Multiple correct answers are allowed
 - Question blocks are separated by an empty line or by starting a new line without indentation
 
+### Adding New Question Sets:
+
+1. Create a new `.txt` file in the `questions/` folder (e.g., `questions4.txt`)
+2. Add the filename to the `index.json` array
+3. Format your questions using the structure shown below
+
 **Example:**
+
 ```
 A cognitive walkthrough is a
 	*usability inspection method
@@ -41,11 +55,13 @@ A diary study
 Used in the **Definition Cards** mode (`quizlet.html`).
 
 Each entry must have:
+
 - `question`: the prompt or title of the card
 - `answer`: the full answer or definition
-- `image` *(optional)*: path to an image located in `data/media/`
+- `image` _(optional)_: path to an image located in `data/media/`
 
 **Example:**
+
 ```json
 [
   {
@@ -67,6 +83,7 @@ Each entry must have:
 Used in the **Example Tasks** mode (`open.html`).
 
 Each entry must include:
+
 - `title`: title of the task
 - `task`: filename of an image showing the task
 - `solution`: filename of an image showing the solution
@@ -74,6 +91,7 @@ Each entry must include:
 All images must be placed in the `data/media/` directory.
 
 **Example:**
+
 ```json
 [
   {
@@ -90,4 +108,3 @@ All images must be placed in the `data/media/` directory.
 ```
 
 ---
-

@@ -1,0 +1,48 @@
+Was ist eine Turingmaschine?
+	*Ein abstraktes Berechnungsmodell mit unendlichem Band.
+	Ein Modell mit mehreren Stacks.
+	*Ein 7-Tupel bestehend aus Zuständen, Eingabealphabet, Bandalphabet, etc.
+	Ein endlicher Automat mit zusätzlichem Speicher.
+	Ein deterministischer NEA.
+
+Welche Aussagen zur Berechenbarkeit sind korrekt?
+	*Es gibt Probleme, die von keiner Turingmaschine entschieden werden können.
+	Alle Sprachen sind entscheidbar.
+	*Entscheidbare Sprachen sind Turing-erkennbar.
+	Turing-erkennbare Sprachen sind alle semi-entscheidbar.
+	Semi-entscheidbare Sprachen sind nicht von Turingmaschinen erkennbar.
+
+Was ist ein semi-entscheidbares Problem?
+	*Ein Problem, bei dem ein Algorithmus im Ja-Fall terminiert.
+	Ein Problem, das effizient lösbar ist.
+	Ein Problem, das nicht entscheidbar ist.
+	*Ein Problem, bei dem bei „Nein“ eventuell kein Halt erfolgt.
+	Semi-entscheidbar bedeutet, dass alle Turingmaschinen es erkennen.
+
+Welche Aussagen zur Church-Turing-These sind korrekt?
+	Sie ist mathematisch beweisbar.
+	*Sie ist eine informelle Annahme über das, was berechenbar ist.
+	*Sie postuliert, dass alle berechenbaren Funktionen durch Turingmaschinen berechnet werden können.
+	Sie wurde durch Gödel widerlegt.
+	Sie ist äquivalent zu P = NP.
+
+Was ist das Halteproblem?
+	*Die Frage, ob eine Turingmaschine bei einer Eingabe hält.
+	Die Frage, ob ein Algorithmus effizient ist.
+	Ein Problem in P.
+	Ein deterministisches Problem.
+	*Ein Beispiel für ein unentscheidbares Problem.
+
+Welche Aussagen zur Reduktion zwischen Problemen sind korrekt?
+	*Wenn A auf B reduzierbar ist und B entscheidbar ist, dann ist auch A entscheidbar.
+	*Reduktion kann zum Nachweis von Unentscheidbarkeit verwendet werden.
+	Reduktion ist nur für Turingmaschinen definiert.
+	*Man kann Reduktion verwenden, um zu zeigen, dass ein Problem schwerer ist als ein anderes.
+	Reduktionen sind nur im Kontext von P und NP sinnvoll.
+
+Welche Aussage zu Entscheidbarkeit ist falsch?
+	Das Leerheitsproblem für Turingmaschinen ist unentscheidbar.
+	Das Wortproblem für reguläre Sprachen ist entscheidbar.
+	*Das Halteproblem für DEA ist unentscheidbar.
+	*Die Sprache aller Turingmaschinen, die bei jeder Eingabe halten, ist entscheidbar.
+	*Das Problem, ob zwei Turingmaschinen dieselbe Sprache akzeptieren, ist entscheidbar.

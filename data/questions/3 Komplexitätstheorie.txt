@@ -1,0 +1,48 @@
+Welche Aussagen zur Komplexitätsklasse P sind korrekt?
+	*P enthält alle Probleme, die in polynomieller Zeit deterministisch lösbar sind.
+	P enthält nur Probleme, die in endlicher Zeit lösbar sind.
+	*P ist eine Teilmenge von NP.
+	*P steht für „polynomial time“.
+	Alle Probleme in P sind NP-vollständig.
+
+Welche Aussagen zur Komplexitätsklasse NP sind korrekt?
+	*NP enthält Probleme, die in polynomieller Zeit nichtdeterministisch lösbar sind.
+	*NP-Probleme lassen sich in polynomieller Zeit verifizieren.
+	Alle NP-Probleme sind auch in P.
+	*SAT ist ein NP-vollständiges Problem.
+	NP steht für „nicht-polynomiell“.
+
+Welche Aussagen zur NP-Vollständigkeit sind korrekt?
+	*Ein Problem ist NP-vollständig, wenn es in NP liegt und jedes Problem in NP darauf reduzierbar ist.
+	Ein NP-vollständiges Problem ist unentscheidbar.
+	*Wenn ein NP-vollständiges Problem in P liegt, gilt P = NP.
+	Nur logische Probleme können NP-vollständig sein.
+	NP-vollständige Probleme können immer mit dynamischer Programmierung gelöst werden.
+
+Was bedeutet polynomielle Reduktion?
+	*Ein Verfahren, um ein Problem effizient auf ein anderes abzubilden.
+	Ein Verfahren zur Laufzeitanalyse.
+	*Ein Nachweiswerkzeug zur Klassifikation von Problemen in NP.
+	Ein Beweis für die Korrektheit eines Algorithmus.
+	*Wenn Problem A auf B polynomiell reduzierbar ist und B in P liegt, dann ist auch A in P.
+
+Was gilt zur Frage P = NP?
+	*Es ist eines der wichtigsten offenen Probleme der Informatik.
+	P = NP ist bewiesen.
+	P = NP bedeutet, dass alle Probleme effizient lösbar sind.
+	*Wenn P ≠ NP gilt, dann sind NP-vollständige Probleme nicht effizient lösbar.
+	*Es ist bislang unbekannt, ob P = NP gilt.
+
+Welche Probleme gelten als NP-vollständig?
+	*SAT (Erfüllbarkeitsproblem)
+	Das Halteproblem
+	*3-SAT
+	*Clique-Problem
+	Das Leerheitsproblem für Turingmaschinen
+
+Welche Aussagen zu Komplexitätsklassen sind korrekt?
+	*EXPTIME enthält Probleme, die in exponentieller Zeit lösbar sind.
+	P ist eine Teilmenge von EXPTIME.
+	Alle entscheidbaren Probleme liegen in NP.
+	*Nichtdeterministische Turingmaschinen definieren die Klasse NP.
+	EXPTIME ist gleich P.
