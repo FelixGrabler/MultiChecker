@@ -49,14 +49,13 @@ Welche Aussagen zu endlichen Automaten sind korrekt?
 
 Welche Sprache ist nicht regulär?
 	Die Menge aller Wörter mit gerader Länge über {a, b}.
-	Die Sprache {aⁿbⁿ | n ≥ 0}.
 	*Die Sprache {aⁿbⁿ | n ≥ 0}.
 	Die Menge aller Wörter ohne zwei aufeinanderfolgende b.
 	*Die Sprache L = {ww | w ∈ {a, b}*}.
 
 Was bedeutet Äquivalenz zweier Automaten?
 	Sie haben die gleiche Anzahl an Zuständen.
-	Sie akzeptieren dieselbe Sprache.
+	*Sie akzeptieren dieselbe Sprache.
 	Sie sind deterministisch.
-	Sie verwenden dieselbe Eingabealphabet.
+	Sie verwenden dasselbe Eingabealphabet.
 	*Sie akzeptieren genau dieselben Wörter.
