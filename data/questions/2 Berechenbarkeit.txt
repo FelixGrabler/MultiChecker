@@ -40,7 +40,7 @@ Welche Aussagen zur Reduktion zwischen Problemen sind korrekt?
 	*Man kann Reduktion verwenden, um zu zeigen, dass ein Problem schwerer ist als ein anderes.
 	Reduktionen sind nur im Kontext von P und NP sinnvoll.
 
-Welche Aussagen zu Entscheidbarkeit ist falsch?
+Welche Aussagen zu Entscheidbarkeit sind richtig?
 	*Das Leerheitsproblem für Turingmaschinen ist unentscheidbar.
 	*Das Wortproblem für reguläre Sprachen ist entscheidbar.
 	Das Halteproblem für DEA ist unentscheidbar.

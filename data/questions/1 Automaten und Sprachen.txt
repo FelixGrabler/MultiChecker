@@ -37,7 +37,7 @@ Was ist ein regulärer Ausdruck?
 	*Ein formales Mittel zur Beschreibung regulärer Sprachen.
 	*Ein Ausdruck, der durch Mengenoperationen auf Symbolen aufgebaut ist.
 	Ein Automat, der Eingaben verarbeitet.
-	Ein Grammatiktyp aus der Chomsky-Hierarchie.
+	*Ein Grammatiktyp aus der Chomsky-Hierarchie.
 	Ein Turing-vollständiges Modell.
 
 Welche Aussagen zu endlichen Automaten sind korrekt?
