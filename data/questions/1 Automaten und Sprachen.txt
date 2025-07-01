@@ -42,7 +42,6 @@ Was ist ein regulärer Ausdruck?
 
 Welche Aussagen zu endlichen Automaten sind korrekt?
 	*Ein endlicher Automat hat eine endliche Anzahl an Zuständen.
-	Ein endlicher Automat benötigt immer einen Stack.
 	Endliche Automaten können alle Turing-erkennbaren Sprachen verarbeiten.
 	*Ein DEA kann als Tupel (Q, Σ, δ, q₀, F) definiert werden.
 	*Endliche Automaten verarbeiten Zeichenketten symbolweise.

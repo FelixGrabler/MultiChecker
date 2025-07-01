@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Multiple Choice Quiz</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <nav>
+    <a href="index.html">Menu</a> |
+    <a href="mc.html">Multiple Choice</a> |
+    <a href="quizlet.html">Kartei Karten (under construction)</a> |
+    <a href="open.html">Beispielaufgaben (under construction)</a>
+  </nav>
+
+  <main>
+    <h1>Multiple Choice Quiz</h1>
+
+    <section id="question-sources">
+      <h3>Source-Dateien auswählen</h3>
+      <div id="source-list"></div>
+      <button id="load-selected">Lernen starten</button>
+    </section>
+
+    <div id="quiz-container"></div>
+    <div id="controls" style="display: none;">
+      <button id="prev">Zurück</button>
+      <button id="next">Weiter</button>
+    </div>
+    <div id="score"></div>
+  </main>
+
+  <script src="script/mc.js"></script>
+</body>
+
+</html>

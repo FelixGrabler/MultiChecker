@@ -10,26 +10,35 @@
 
 <body>
   <nav>
-    <a href="index.html">Multiple Choice</a> |
-    <a href="quizlet.html">Definitionen (under construction)</a> |
+    <a href="index.html">Menu</a> |
+    <a href="mc.html">Multiple Choice</a> |
+    <a href="quizlet.html">Kartei Karten (under construction)</a> |
     <a href="open.html">Beispielaufgaben (under construction)</a>
   </nav>
 
   <main>
-    <h1>Multiple Choice Quiz</h1>
+    <h1>Theoretische Informatik - Klausurvorbereitung</h1>
 
-    <section id="question-sources">
-      <h3>Source-Dateien auswählen</h3>
-      <div id="source-list"></div>
-      <button id="load-selected">Lernen starten</button>
-    </section>
+    <div class="info-section">
+      <h2>Willkommen zur Lern-Seite für Theoretische Informatik!</h2>
 
-    <div id="quiz-container"></div>
-    <div id="controls" style="display: none;">
-      <button id="prev">Zurück</button>
-      <button id="next">Weiter</button>
+      <p>Diese Seite bietet verschiedene Lernmodi zur Vorbereitung auf die Klausur:</p>
+      <ul>
+        <li><strong>Multiple Choice:</strong> Verständnisfragen (50% der Klausur laut Prof)</li>
+        <li><strong>Kartei Karten:</strong> Definitionen, Konzepte, ... (25% laut Prof)</li>
+        <li><strong>Beispielaufgaben:</strong> Praktische (längere) Aufgaben (25% laut Prof)</li>
+      </ul>
+
+      <div class="links-section">
+        <h3>Links & Infos:</h3>
+        <p>🌐 <strong>Online Version:</strong> <a href="https://felixgrabler.github.io/MultiChecker/"
+            target="_blank">felixgrabler.github.io/MultiChecker</a></p>
+        <p>💻 <strong>GitHub Repository:</strong> <a href="https://github.com/FelixGrabler/MultiChecker"
+            target="_blank">github.com/FelixGrabler/MultiChecker</a></p>
+        <p>Wenn du übermotiviert bist kannst du gern weitere Fragen/Aufgaben reinhauen oder das Projekt "klauen" für andere Sachen.</p>
+      </div>
     </div>
-    <div id="score"></div>
+
   </main>
 
   <script src="script/mc.js"></script>

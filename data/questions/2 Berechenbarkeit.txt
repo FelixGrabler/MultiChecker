@@ -15,7 +15,7 @@ Welche Aussagen zur Berechenbarkeit sind korrekt?
 Was ist ein semi-entscheidbares Problem?
 	*Ein Problem, bei dem ein Algorithmus im Ja-Fall terminiert.
 	Ein Problem, das effizient lösbar ist.
-	Ein Problem, das nicht entscheidbar ist.
+	Ein Problem, das in allen Fällen terminieren muss.
 	*Ein Problem, bei dem bei „Nein“ eventuell kein Halt erfolgt.
 	Semi-entscheidbar bedeutet, dass alle Turingmaschinen es erkennen.
 
@@ -40,9 +40,9 @@ Welche Aussagen zur Reduktion zwischen Problemen sind korrekt?
 	*Man kann Reduktion verwenden, um zu zeigen, dass ein Problem schwerer ist als ein anderes.
 	Reduktionen sind nur im Kontext von P und NP sinnvoll.
 
-Welche Aussage zu Entscheidbarkeit ist falsch?
-	Das Leerheitsproblem für Turingmaschinen ist unentscheidbar.
-	Das Wortproblem für reguläre Sprachen ist entscheidbar.
-	*Das Halteproblem für DEA ist unentscheidbar.
-	*Die Sprache aller Turingmaschinen, die bei jeder Eingabe halten, ist entscheidbar.
-	*Das Problem, ob zwei Turingmaschinen dieselbe Sprache akzeptieren, ist entscheidbar.
+Welche Aussagen zu Entscheidbarkeit ist falsch?
+	*Das Leerheitsproblem für Turingmaschinen ist unentscheidbar.
+	*Das Wortproblem für reguläre Sprachen ist entscheidbar.
+	Das Halteproblem für DEA ist unentscheidbar.
+	Die Sprache aller Turingmaschinen, die bei jeder Eingabe halten, ist entscheidbar.
+	Das Problem, ob zwei Turingmaschinen dieselbe Sprache akzeptieren, ist entscheidbar.
