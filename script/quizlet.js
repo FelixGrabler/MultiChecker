@@ -55,8 +55,8 @@ function renderCard() {
   // Buttons aktualisieren
   const toggleBtn = document.getElementById("toggle-answer");
   toggleBtn.textContent = shown
-    ? "Definition ausblenden"
-    : "Definition anzeigen";
+    ? "Lösung ausblenden"
+    : "Lösung anzeigen";
 
   document.getElementById("prev-card").disabled = current === 0;
 

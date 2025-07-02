@@ -1,8 +1,16 @@
 [
   {
+    "question": "Definition von Alphabet, Wort, Wörter und Sprache",
+    "image": "alphabet_wort_sprache.png"
+  },
+  {
     "question": "Was ist ein DEA? (Definition)",
     "answer": "Ein deterministischer endlicher Automat ist ein ...",
     "image": "dea.png"
+  },
+  {
+    "question": "Ein endlicher Automat akzeptiert ein Wort w, wenn...",
+    "image": "dea_accepts.png"
   },
   {
     "question": "Was ist ein NEA? (Definition)",
@@ -10,7 +18,23 @@
     "image": "nea.png"
   },
   {
+    "question": "Definition Pumping Lemma",
+    "image": "pumping1.png"
+  },
+  {
+    "question": "Wie verwendet man das Pumping Lemma, um \"nicht regulär\" für eine Sprache zu beweisen?",
+    "image": "pumping2.png"
+  },
+  {
     "question": "Was ist eine Turingmaschine? (Definition)",
-    "answer": "Eine Turingmaschine ist ein 7 Tupel, ..."
+    "image": "turing_machine.png"
+  },
+  {
+    "question": "Wie sieht die Übergangsfunktion (delta) der folgenden Turingmaschinen aus: 1-band, k-band, deterministisch, nichtdeterministisch?",
+    "image": "tm_delta.png"
+  },
+  {
+    "question": "Wie schaut die Turingmaschine mit folgender Konfiguration aus: (aq₃bc)? q₃ ist der aktuelle Zustand.",
+    "image": "tm_configuration.png"
   }
 ]
