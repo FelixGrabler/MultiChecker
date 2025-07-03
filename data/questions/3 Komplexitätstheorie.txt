@@ -1,5 +1,3 @@
-
-
 Definition der O-Notation
 	*𝑓 ∈ 𝒪(𝑔) ⇔ ∃ c>0, n₀ ∈ ℕ ∀ n>n₀: 𝑓(n) ≤ c·𝑔(n).
 	𝑓 ∈ 𝒪(𝑔) ⇔ ∀ c>0 ∃ n₀ ∀ n>n₀: 𝑓(n) ≥ c·𝑔(n).

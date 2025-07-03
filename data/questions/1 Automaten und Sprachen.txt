@@ -1,4 +1,3 @@
-
 Welche Aussagen charakterisieren ein Alphabet Σ?
 	*Σ ist eine endliche Menge von Symbolen.
 	*Eine Sprache über Σ ist stets Teilmenge von Σ*.

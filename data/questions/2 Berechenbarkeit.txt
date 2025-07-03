@@ -1,91 +1,83 @@
+Welche der folgenden Aussagen zu den Komponenten einer 1-Band-Turingmaschine ist **richtig**?
+	*Q ist die endliche Menge der Zustände.
+	Σ enthält das Blank-Symbol ⊔.
+	*Γ ist das Bandalphabet (mit Blank ⊔ und Σ ⊂ Γ).
+	Das Bandalphabet Γ besteht immer aus Σ + {⊔}.
+	δ: Q × Σ → Q × Σ × {L, R, H}
+	*δ: Q × Γ → Q × Γ × {L, R, H}
+	*q₀ ∈ Q ist der Startzustand.
+	q✓ und q✗ müssen nicht in Q liegen.
 
 
-Welche Aussagen treffen auf informale Beschreibung einer Turingmaschine zu?
-	*Sie besitzt eine endliche Kontrolleinheit und unendlichen Band­speicher.
-	*Der Schreib-/Lesekopf kann pro Schritt nur ein Feld nach links oder rechts (oder stehen bleiben) bewegt werden.
-	Die Übergangsfunktion kann auf beliebig viele Eingabesymbole gleichzeitig zugreifen.
-	Eine Turingmaschine hat per Definition unendlich viele Zustände. :contentReference[oaicite:0]{index=0}
-
-Welche Elemente enthält das formale 7-Tupel einer Ein-Band-Turingmaschine 𝑀 = (𝑄, Σ, Γ, δ, 𝑞₀, 𝑞✓, 𝑞𝑋)?
-	*𝑄: endliche Zustandsmenge
-	*Σ: Eingabealphabet ohne ⊔
-	*Γ: Bandalphabet mit ⊔ und Σ ⊂ Γ
-	δ: Teilfunktion von 𝑄×Σ → 𝑄×Γ×{L,H,R}
-	𝑞₀: Startzustand
-	𝑞✓: akzeptierender Endzustand
-	𝑞𝑋: ablehnender Endzustand :contentReference[oaicite:1]{index=1}
-
-Welche Konfigurations­definition ist korrekt?
-	*Eine Konfiguration ist ein Tripel 𝜇𝑞𝜈, wobei 𝜇, 𝜈 ∈ Γ* und 𝑞 ∈ 𝑄 den Zustand unter dem Kopf bezeichnet.
-	Das leere Wort ε kann nicht als Bandinhalt in einer Konfiguration auftreten.
+Konfiguration einer Turingmaschine …
+	*Eine Konfiguration ist ein Tripel 𝜇𝑞𝜈, wobei 𝜇, 𝜈 ∈ Γ* und 𝑞 ∈ 𝑄 den aktuellen Zustand bezeichnet.
 	*Terminierende Konfigurationen enthalten 𝑞✓ oder 𝑞𝑋.
-	Konfigurationen können nur in einem Baumsuch­verfahren erzeugt werden. :contentReference[oaicite:2]{index=2}
+	*010𝑞⊔ ist eine gültige Konfiguration (mit ⊔ als Blank-Symbol)
+	Die Konfiguration ändert sich bei jedem Schritt.
 
-Eine Turingmaschine akzeptiert ein Wort w, wenn …
-	*mindestens eine Berechnung in den akzeptierenden Zustand 𝑞✓ führt.
-	alle Berechnungspfade terminiert sein müssen.
-	*bei Determinismus der einzige Pfad in 𝑞✓ endet.
-	der Schreib-/Lesekopf nach Ende in der Ausgangsposition steht. :contentReference[oaicite:3]{index=3}
-
+Eine Turingmaschine akzeptiert ein Wort w nur dann, wenn …
+	*wenn mindestens eine Berechnung in den akzeptierenden Zustand 𝑞✓ führt.
+	wenn alle Berechnungspfade terminieren.
+	wenn alle Berechnungspfade in einem (akzeptierenden) Endzustand enden.
 
 
 Was sind echte Varianten von Turingmaschinen, die die Ausdrucks­stärke nicht verändern?
 	*Multiband-Turingmaschinen mit k Bändern und k Köpfen.
-	Nichtdeterministische Turingmaschinen mit Baum der Konfigurationen.
-	*Keep-Moving-Turingmaschinen (Kopf muss sich bewegen).
+	*Nichtdeterministische Turingmaschinen
+	*Keep-Moving-Turingmaschinen.
+	Ich-Halte-Das-Alles-Nicht-Mehr-Aus-Turingmaschinen.
 	Turingmaschinen mit unendlicher Zustandsmenge.
 
 Welche Äquivalenzsätze gelten?
 	*Jede k-Band-TM lässt sich durch eine Ein-Band-TM emulieren.
-	Alle Nichtdeterministischen TMs lassen sich als deterministische TMs simulieren.
+	*Alle Nichtdeterministischen TMs lassen sich als deterministische TMs simulieren.
 	Jede Turingmaschine lässt sich durch einen endlichen Automaten ersetzen.
-	*Für jede Nichtdeterministische TM existiert eine äquivalente Deterministische TM.
+	*Für jede Nichtdeterministische TM existiert mindestens eine äquivalente Deterministische TM.
 
 
 
 Die Universelle Turingmaschine U …
 	*kann jede andere TM ⟨M⟩ auf Eingabe w simulieren.
-	nutzt für jede Simulation mindestens drei Bänder.
-	*ist selbst eine (einzelne) Turingmaschine mit Beschreibung ⟨U⟩.
-	kann nur deterministische TMs simulieren. :contentReference[oaicite:4]{index=4}
+	kann nur deterministische TMs simulieren.
+	*U akzeptiert genau dann, wenn M auf w akzeptiert.
+	*U terminiert genau dann, wenn M auf w terminiert.
 
 Die Sprache 𝐴TM definiert das Akzeptanzproblem:
 	*𝐴TM = { (⟨M⟩,⟨w⟩) ∣ M akzeptiert w }.
-	𝐴TM enthält alle Codierungen von TMs.
+	Alle TMs sind mindestens einmal in 𝐴TM enthalten.
 	*𝐴TM ist semi-entscheidbar.
-	𝐴TM ist entscheidbar. :contentReference[oaicite:5]{index=5}
-
-Welche Aussage zu 𝐴TM ist **falsch**?
-	𝐴TM ist semi-entscheidbar.
-	𝐴TM ist unentscheidbar.
-	*𝐴TM ist co-semi-entscheidbar.
-	Die Universalmaschine U erkennt 𝐴TM durch Emulation. :contentReference[oaicite:6]{index=6}
+	𝐴TM ist entscheidbar.
+	*𝐴TM ist unentscheidbar.
+	𝐴TM ist co-semi-entscheidbar.
 
 Das Halteproblem 𝐻TM := { (⟨M⟩,⟨w⟩) ∣ M terminiert auf w } …
 	*ist unentscheidbar.
-	*kann von U semi-entscheidbar erkannt werden.
+	*kann von UTM semi-entscheidbar erkannt werden.
 	ist gleich 𝐴TM.
-	ist co-semi-entscheidbar. :contentReference[oaicite:7]{index=7}
+	ist co-semi-entscheidbar.
+	ist entscheidbar.
+	*ist semi-entscheidbar.
 
 Welche Aussagen zur (Co-)Semi-Entscheidbarkeit und Entscheidbarkeit sind korrekt?
-	*Eine Sprache L ist genau dann entscheidbar, wenn L und sein Komplement co-semi-entscheidbar sind.
+	*Eine Sprache L ist genau dann entscheidbar, wenn L und sein Komplement semi-entscheidbar sind.
 	*Co-Semi-entscheidbarkeit bedeutet, dass das Komplement semi-entscheidbar ist.
 	Entscheidbare Sprachen sind weder semi- noch co-semi-entscheidbar.
-	Ein semi-entscheidbares Problem ist stets entscheidbar. :contentReference[oaicite:8]{index=8}
+	Semi-entscheidbare Sprachen sind stets unentscheidbar.
 
 
 
-Eine Reduktion A ≼ B heißt …
+Reduktion A ≼ B
 	*A ist auf B reduzierbar, wenn es eine berechenbare Funktion f mit w∈A ⇔ f(w)∈B gibt.
-	Reduktionen dürfen nur endliche Worte umformen.
-	*A polynomialzeit­beschränkte Reduktion heißt A ≼ₚ B.
-	A und B müssen dieselbe Eingabe­alphabetgröße haben. :contentReference[oaicite:9]{index=9}
+	*Eine polynomzeitbeschränkte Reduktion A ≼ₚ B verlangt zusätzlich, dass f in polynomieller Zeit berechnet werden kann.
+	*Wenn A ≼ B und B entscheidbar ist, dann ist auch A entscheidbar.
+	A und B müssen dasselbe Eingabealphabet Σ haben.
 
-Was folgt aus A ≼ B und B entscheidbar?
-	*A ist entscheidbar.
-	A ist semi-entscheidbar.
-	*Eine funktionale Reduktion existiert ebenfalls in umgekehrter Richtung.
-	A ist co-semi-entscheidbar. :contentReference[oaicite:10]{index=10}
+
+Reduktion A ≼ B, (un/semi)entscheidbar
+	*Aus A ≼ B und B (semi-)entscheidbar folgt: A ist (semi-)entscheidbar.
+	*Aus A ≼ B und A unentscheidbar folgt: B ist unentscheidbar.
+	Aus A ≼ B und A (semi-)entscheidbar folgt: B ist (semi-)entscheidbar.
+	Aus A ≼ B und B unentscheidbar folgt: A ist unentscheidbar.
 
 
 
@@ -93,10 +85,4 @@ Welche Aussagen zum Umfang (Mächtigkeit) von Sprachen treffen zu?
 	*Die Menge aller TMs ist abzählbar.
 	*Die Menge aller Sprachen über Σ={0,1} ist überabzählbar.
 	Alle Sprachen sind entscheidbar.
-	Es gibt nur abzählbar viele nicht entscheidbare Sprachen. :contentReference[oaicite:11]{index=11}
-
-Welche Rückschlüsse aus Lemma 2.2.6 (“es gibt nicht (semi-)entscheidbare Sprachen”) sind korrekt?
-	*Es bleiben überabzählbar viele Sprachen, wenn man alle (semi-)entscheidbaren abzählt.
-	Alle unentscheidbaren Sprachen sind co-semi-entscheidbar.
-	*Die Wahrscheinlichkeit, zufällig eine (semi-)entscheidbare Sprache zu wählen, ist 0.
-	Nur unendliche Sprachen können unentscheidbar sein. :contentReference[oaicite:12]{index=12}
+	Es gibt nur abzählbar viele nicht entscheidbare Sprachen.
