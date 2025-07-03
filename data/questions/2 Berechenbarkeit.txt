@@ -42,18 +42,18 @@ Die Universelle Turingmaschine U …
 	*U akzeptiert genau dann, wenn M auf w akzeptiert.
 	*U terminiert genau dann, wenn M auf w terminiert.
 
-Die Sprache 𝐴TM definiert das Akzeptanzproblem:
-	*𝐴TM = { (⟨M⟩,⟨w⟩) ∣ M akzeptiert w }.
-	Alle TMs sind mindestens einmal in 𝐴TM enthalten.
-	*𝐴TM ist semi-entscheidbar.
-	𝐴TM ist entscheidbar.
-	*𝐴TM ist unentscheidbar.
-	𝐴TM ist co-semi-entscheidbar.
+Die Sprache 𝐴_TM definiert das Akzeptanzproblem:
+	*𝐴_TM = { (⟨M⟩,⟨w⟩) ∣ M akzeptiert w }.
+	Alle TMs sind mindestens einmal in 𝐴_TM enthalten.
+	*𝐴_TM ist semi-entscheidbar.
+	𝐴_TM ist entscheidbar.
+	*𝐴_TM ist unentscheidbar.
+	𝐴_TM ist co-semi-entscheidbar.
 
-Das Halteproblem 𝐻TM := { (⟨M⟩,⟨w⟩) ∣ M terminiert auf w } …
+Das Halteproblem 𝐻_TM := { (⟨M⟩,⟨w⟩) ∣ M terminiert auf w } …
 	*ist unentscheidbar.
-	*kann von UTM semi-entscheidbar erkannt werden.
-	ist gleich 𝐴TM.
+	*kann von 𝑈_TM semi-entscheidbar erkannt werden.
+	ist gleich 𝐴_TM.
 	ist co-semi-entscheidbar.
 	ist entscheidbar.
 	*ist semi-entscheidbar.

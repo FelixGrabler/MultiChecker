@@ -68,7 +68,7 @@ Polynomzeit-Reduktion A ≼ₚ B bedeutet …
 NP-Schwere und NP-Vollständigkeit
 	*B NP-hart ⇔ ∀A∈NP: A ≼ₚ B.
 	B NP-vollständig ⇔ B∈NP und B NP-hart.
-	*Ist B NP-vollständig und B∈P ⇒ P=NP.
+	*B NP-vollständig und B∈P ⇒ P=NP.
 	NP-harte Probleme sind immer entscheidbar.
 
 Satz von Cook-Levin
