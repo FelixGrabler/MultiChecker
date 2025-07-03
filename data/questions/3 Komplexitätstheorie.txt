@@ -2,13 +2,13 @@ Definition der O-Notation
 	*𝑓 ∈ 𝒪(𝑔) ⇔ ∃ c>0, n₀ ∈ ℕ ∀ n>n₀: 𝑓(n) ≤ c·𝑔(n).
 	𝑓 ∈ 𝒪(𝑔) ⇔ ∀ c>0 ∃ n₀ ∀ n>n₀: 𝑓(n) ≥ c·𝑔(n).
 	*Es gibt Konstanten c, n₀, sodass ab n₀ gilt 𝑓(n) ≤ c·𝑔(n).
-	𝑓 ∈ 𝒪(𝑔) ⇔ 𝑓(n)/𝑔(n) → ∞ für n→∞. :contentReference[oaicite:0]{index=0}
+	𝑓 ∈ 𝒪(𝑔) ⇔ 𝑓(n)/𝑔(n) → ∞ für n→∞.
 
 Zeitkostenfunktion einer TM M
 	*𝐾ₘ(w) ist die Anzahl der Schritte, bis M auf Eingabe w terminiert.
 	𝐾ₘ(n) = max{|w|=n} Länge des Bandinhalts.
 	*Die Zeitkomplexität fₘ(n) = max\{𝐾ₘ(w) ∣ |w|=n\}.
-	𝐾ₘ(w) misst die Anzahl der Zustände, die M durchläuft. :contentReference[oaicite:1]{index=1}
+	𝐾ₘ(w) misst die Anzahl der Zustände, die M durchläuft.
 
 Simulationsaufwand nichtdeterministischer TMs
 	*Eine k-Band-NTM mit Laufzeit fₙ(n) lässt sich durch eine 1-Band-TM mit Laufzeit 2^O(fₙ(n)) simulieren.
@@ -62,7 +62,7 @@ Polynomzeit-Reduktion A ≼ₚ B bedeutet …
 	*A ist auf B reduzierbar, wenn f berechenbar in poly. Zeit und w∈A ⇔ f(w)∈B.
 	Reduktion darf nur Σ→Σ ohne Größe ändern.
 	*Transitivität: A ≼ₚ B und B ≼ₚ C ⇒ A ≼ₚ C.
-	A und B müssen gleiche Komplexitätsklasse haben. :contentReference[oaicite:2]{index=2}
+	A und B müssen gleiche Komplexitätsklasse haben.
 
 NP-Schwere und NP-Vollständigkeit
 	*B NP-hart ⇔ ∀A∈NP: A ≼ₚ B.
@@ -94,7 +94,7 @@ Beziehungsdiagramm P, NP, EXP
 	*P ⊆ NP ⊆ EXP und P ⊊ EXP.
 	NP = EXP bekannt offen.
 	*P ⊊ NP folgt aus P⊆NP und P≠NP.
-	EXP ⊆ NP, da NTMs simuliert werden können. :contentReference[oaicite:3]{index=3}
+	EXP ⊆ NP, da NTMs simuliert werden können.
 
 Welche Aussage trifft zu?
 	Wenn NP⊆P, dann P=NP.
@@ -112,17 +112,17 @@ Grenzen von NP-Techniken
 	*Pumping-Lemma kann Nicht-Untersuchungen für NP-Sprachen nicht beweisen.
 	Reduktion zeigt nur NP-Schwere, nicht Nicht-Entscheidbarkeit.
 	*Relativierung und Algebrasindizien beschränken Beweismethoden für P≠NP.
-	Cook-Levin liefert konstruktive Zertifikate. :contentReference[oaicite:4]{index=4}
+	Cook-Levin liefert konstruktive Zertifikate.
 
 Verifikation vs. Entscheidung
 	*Verifizieren (NP) ist oft einfacher als Finden (P vs. NP).
 	Alle P-Algorithmen lassen sich als Verifizierer einsetzen.
 	*Ein Verifizierer ignoriert das Zertifikat vollständig.
-	Ein Entscheidungsalgorithmus kann nicht als Verifizierer dienen. :contentReference[oaicite:5]{index=5}
+	Ein Entscheidungsalgorithmus kann nicht als Verifizierer dienen.
 
 Single‐Choice zur Simulation
 	Eine NTM mit Laufzeit f(n) lässt sich simulieren durch:
 	Ein-Band-TM mit Laufzeit O(f(n)).
 	*Ein-Band-TM mit Laufzeit 2^O(f(n)).
 	k-Band-TM mit Laufzeit f(n)·k.
-	Eine deterministische RAM-Maschine mit O(log n) Overhead. :contentReference[oaicite:6]{index=6}
+	Eine deterministische RAM-Maschine mit O(log n) Overhead.
