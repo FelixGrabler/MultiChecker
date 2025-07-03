@@ -2,7 +2,7 @@ Welche der folgenden Aussagen zu den Komponenten einer 1-Band-Turingmaschine ist
 	*Q ist die endliche Menge der Zustände.
 	Σ enthält das Blank-Symbol ⊔.
 	*Γ ist das Bandalphabet (mit Blank ⊔ und Σ ⊂ Γ).
-	Das Bandalphabet Γ besteht immer aus Σ + {⊔}.
+	Das Bandalphabet Γ besteht immer nur aus Σ + {⊔}.
 	δ: Q × Σ → Q × Σ × {L, R, H}
 	*δ: Q × Γ → Q × Γ × {L, R, H}
 	*q₀ ∈ Q ist der Startzustand.
@@ -13,7 +13,7 @@ Konfiguration einer Turingmaschine …
 	*Eine Konfiguration ist ein Tripel 𝜇𝑞𝜈, wobei 𝜇, 𝜈 ∈ Γ* und 𝑞 ∈ 𝑄 den aktuellen Zustand bezeichnet.
 	*Terminierende Konfigurationen enthalten 𝑞✓ oder 𝑞𝑋.
 	*010𝑞⊔ ist eine gültige Konfiguration (mit ⊔ als Blank-Symbol)
-	Die Konfiguration ändert sich bei jedem Schritt.
+	Die Konfiguration zeigt, welches Zeichen im nächsten Schritt geschrieben wird.
 
 Eine Turingmaschine akzeptiert ein Wort w nur dann, wenn …
 	*wenn mindestens eine Berechnung in den akzeptierenden Zustand 𝑞✓ führt.
