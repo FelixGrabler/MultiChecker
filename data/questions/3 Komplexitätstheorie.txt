@@ -9,6 +9,7 @@ Zeitkostenfunktion einer TM M
 	𝐾ₘ(n) = max{|w|=n} Länge des Bandinhalts.
 	*Die Zeitkomplexität fₘ(n) = max\{𝐾ₘ(w) ∣ |w|=n\}.
 	𝐾ₘ(w) misst die Anzahl der Zustände, die M durchläuft.
+	*Die Kostenfunktion wird anhand der schnellst möglichen TM gemessen.
 
 Simulationsaufwand nichtdeterministischer TMs
 	*Eine k-Band-NTM mit Laufzeit fₙ(n) lässt sich durch eine 1-Band-TM mit Laufzeit 2^O(fₙ(n)) simulieren.
@@ -19,20 +20,20 @@ Simulationsaufwand nichtdeterministischer TMs
 
 
 Definition der Klasse P
-	*P = ⋃ₖ≥1 TIME(nᵏ), Sprachen, die eine deterministische 1-Band-TM in polynomieller Zeit entscheidet.
+	*P = ⋃ₖ≥1 TIME(nᵏ), Sprachen die eine deterministische 1-Band-TM in polynomieller Zeit entscheidet.
 	P = ⋂ₖ≥1 TIME(nᵏ).
-	*P ist unabhängig von Wahl der Maschine (k-Band, RAM).
+	*P ist unabhängig von Wahl der Maschine (1-Band, k-Band, RAM).
 	P = EXP.
 
 Eigenschaften von P
 	*Jede Sprache in P ist auch in NP (P ⊆ NP).
-	Es ist offen, ob P ⊂ NP.
+	*Es ist offen, ob P = NP.
 	*Algorithmen in P haben für n≈300 praktisch endliche Laufzeit, selbst für hohe Polynome.
 	Es gibt Probleme in P, die exponentiell viele Schritte benötigen.
 
 Beispiel PATH
 	*PATH = {(G,s,t) ∣ in G gibt es einen Pfad von s nach t} ∈ P.
-	PATH ∉ P, da Graphgröße binär kodiert.
+	PATH ∉ P, da es n^n Knoten-Kombinationen gibt.
 	*Eine BFS/DFS-Implementierung auf Turingmaschine läuft in O(n³).
 	PATH ist NP-vollständig.
 
@@ -46,9 +47,9 @@ Verifizierer-Charakterisierung von NP
 
 Beispiele in NP
 	*HAMPATH = {(G,s,t) ∣ G enthält Hamilton-Pfad von s nach t} ∈ NP.
-	PATH ∉ NP.
+	*PATH ∈ NP.
 	*SAT und 3SAT ∈ NP.
-	Graph-Clique ∉ NP.
+	*Graph-Clique ∈ NP.
 
 Welche Aussage ist falsch?
 	P ⊆ NP.
@@ -60,9 +61,9 @@ Welche Aussage ist falsch?
 
 Polynomzeit-Reduktion A ≼ₚ B bedeutet …
 	*A ist auf B reduzierbar, wenn f berechenbar in poly. Zeit und w∈A ⇔ f(w)∈B.
-	Reduktion darf nur Σ→Σ ohne Größe ändern.
+	|w| = |f(w)| für alle w∈Σ*.
 	*Transitivität: A ≼ₚ B und B ≼ₚ C ⇒ A ≼ₚ C.
-	A und B müssen gleiche Komplexitätsklasse haben.
+	A und B müssen das gleiche Alphabet Σ haben.
 
 NP-Schwere und NP-Vollständigkeit
 	*B NP-hart ⇔ ∀A∈NP: A ≼ₚ B.
