@@ -19,8 +19,8 @@ Simulationsaufwand nichtdeterministischer TMs
 
 
 Definition der Klasse P
-	*P = ⋃ₖ≥1 TIME(nᵏ), Sprachen die eine deterministische 1-Band-TM in polynomieller Zeit entscheidet.
-	P = ⋂ₖ≥1 TIME(nᵏ).
+	*P = ⋃_k≥1 TIME(nᵏ), Sprachen die eine deterministische 1-Band-TM in polynomieller Zeit entscheidet.
+	P = ⋂_k≥1 TIME(nᵏ).
 	*P ist unabhängig von Wahl der Maschine (1-Band, k-Band, RAM).
 	P = EXP.
 
