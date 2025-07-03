@@ -104,7 +104,7 @@ P, NP, EXP
 Abschätzungen
 	*Eine 2-Band-TM kann eine quadratische-Zeit-TM auf O(n) beschleunigen.
 	*Eine k-Band-Simulation verursacht höchstens polynomialen Overhead.
-	Simulation einer Multi-Band-TM auf 1-Band verliert nicht mehr als log-Faktor.
+	Simulation einer Multi-Band-TM auf eine 1-Band-TM erfordert nur logarithmischen Zeit-Overhead.
 
 Verifikation vs. Entscheidung
 	*Jeder Algorithmus in P kann als NP-Verifizierer für sich selbst dienen.
