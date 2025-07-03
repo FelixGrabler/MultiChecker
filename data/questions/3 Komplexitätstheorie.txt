@@ -97,7 +97,7 @@ Beziehungsdiagramm P, NP, EXP
 	NP ⊆ P.
 	NP = EXP.
 
-Welche Aussage trifft zu?
+P, NP, EXP
 	*Falls SAT∈P, folgt P=NP.
 	*Falls P=NP, folgt NP≠EXP.
 
