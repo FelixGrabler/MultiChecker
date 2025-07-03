@@ -89,10 +89,10 @@ Konsequenzen korollar 3.4.7
 
 
 
-Beziehungsdiagramm P, NP, EXP
+Beziehungsdiagramm P, NP, EXP (was ist bewiesen?)
 	*P ⊆ NP
 	*NP ⊆ EXP
-	P ⊆ EXP
+	*P ⊆ EXP
 	NP ⊆ P.
 	NP = EXP.
 
