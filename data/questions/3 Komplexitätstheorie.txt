@@ -53,7 +53,7 @@ Beispiele in NP
 Welche Aussage ist falsch?
 	P ⊆ NP.
 	NP ⊆ EXP.
-	*NP ⊆ P.
+	*EXP ⊆ P.
 	P ⊂ EXP.
 
 
