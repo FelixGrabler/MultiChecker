@@ -9,7 +9,7 @@ Zeitkostenfunktion einer TM M
 	𝐾ₘ(n) = max{|w|=n} Länge des Bandinhalts.
 	*Die Zeitkomplexität fₘ(n) = max\{𝐾ₘ(w) ∣ |w|=n\}.
 	𝐾ₘ(w) misst die Anzahl der Zustände, die M durchläuft.
-	*Die Kostenfunktion wird anhand der schnellst möglichen TM gemessen.
+	*Die Zeitkomplexität wird anhand der schnellst möglichen TM gemessen.
 
 Simulationsaufwand nichtdeterministischer TMs
 	*Eine k-Band-NTM mit Laufzeit fₙ(n) lässt sich durch eine 1-Band-TM mit Laufzeit 2^O(fₙ(n)) simulieren.
