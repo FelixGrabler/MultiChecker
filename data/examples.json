@@ -8,5 +8,20 @@
     "title": "DEA Konstruieren 2",
     "task": "example2.png",
     "solution": "solution2.png"
+  },
+  {
+    "title": "Entscheidbarkeit Reduktion 1",
+    "task": "question-reduction-language_of_size_1.png",
+    "solution": "answer-reduction-language_of_size_1.png"
+  },
+  {
+    "title": "Entscheidbarkeit Reduktion 2",
+    "task": "question-reduction-visited_state.png",
+    "solution": "answer-reduction-visited_state.png"
+  },
+  {
+    "title": "Entscheidbarkeit Reduktion 3",
+    "task": "question-reduction-reversed.png",
+    "solution": "answer-reduction-reversed.png"
   }
 ]
