@@ -1,6 +1,6 @@
 # 📁 Data Folder
 
-This folder contains the content used by the learning interface.  
+This folder contains the content used by the learning interface.
 Each file/folder serves a specific mode: Multiple Choice, Definitions, or Example Exercises.
 
 ---

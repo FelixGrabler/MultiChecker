@@ -1,48 +1,102 @@
-Was ist eine Turingmaschine?
-	*Ein abstraktes Berechnungsmodell mit unendlichem Band.
-	Ein Modell mit mehreren Stacks.
-	*Ein 7-Tupel bestehend aus Zuständen, Eingabealphabet, Bandalphabet, etc.
-	Ein endlicher Automat mit zusätzlichem Speicher.
-	Ein deterministischer NEA.
 
-Welche Aussagen zur Berechenbarkeit sind korrekt?
-	*Es gibt Probleme, die von keiner Turingmaschine entschieden werden können.
+
+Welche Aussagen treffen auf informale Beschreibung einer Turingmaschine zu?
+	*Sie besitzt eine endliche Kontrolleinheit und unendlichen Band­speicher.
+	*Der Schreib-/Lesekopf kann pro Schritt nur ein Feld nach links oder rechts (oder stehen bleiben) bewegt werden.
+	Die Übergangsfunktion kann auf beliebig viele Eingabesymbole gleichzeitig zugreifen.
+	Eine Turingmaschine hat per Definition unendlich viele Zustände. :contentReference[oaicite:0]{index=0}
+
+Welche Elemente enthält das formale 7-Tupel einer Ein-Band-Turingmaschine 𝑀 = (𝑄, Σ, Γ, δ, 𝑞₀, 𝑞✓, 𝑞𝑋)?
+	*𝑄: endliche Zustandsmenge
+	*Σ: Eingabealphabet ohne ⊔
+	*Γ: Bandalphabet mit ⊔ und Σ ⊂ Γ
+	δ: Teilfunktion von 𝑄×Σ → 𝑄×Γ×{L,H,R}
+	𝑞₀: Startzustand
+	𝑞✓: akzeptierender Endzustand
+	𝑞𝑋: ablehnender Endzustand :contentReference[oaicite:1]{index=1}
+
+Welche Konfigurations­definition ist korrekt?
+	*Eine Konfiguration ist ein Tripel 𝜇𝑞𝜈, wobei 𝜇, 𝜈 ∈ Γ* und 𝑞 ∈ 𝑄 den Zustand unter dem Kopf bezeichnet.
+	Das leere Wort ε kann nicht als Bandinhalt in einer Konfiguration auftreten.
+	*Terminierende Konfigurationen enthalten 𝑞✓ oder 𝑞𝑋.
+	Konfigurationen können nur in einem Baumsuch­verfahren erzeugt werden. :contentReference[oaicite:2]{index=2}
+
+Eine Turingmaschine akzeptiert ein Wort w, wenn …
+	*mindestens eine Berechnung in den akzeptierenden Zustand 𝑞✓ führt.
+	alle Berechnungspfade terminiert sein müssen.
+	*bei Determinismus der einzige Pfad in 𝑞✓ endet.
+	der Schreib-/Lesekopf nach Ende in der Ausgangsposition steht. :contentReference[oaicite:3]{index=3}
+
+
+
+Was sind echte Varianten von Turingmaschinen, die die Ausdrucks­stärke nicht verändern?
+	*Multiband-Turingmaschinen mit k Bändern und k Köpfen.
+	Nichtdeterministische Turingmaschinen mit Baum der Konfigurationen.
+	*Keep-Moving-Turingmaschinen (Kopf muss sich bewegen).
+	Turingmaschinen mit unendlicher Zustandsmenge.
+
+Welche Äquivalenzsätze gelten?
+	*Jede k-Band-TM lässt sich durch eine Ein-Band-TM emulieren.
+	Alle Nichtdeterministischen TMs lassen sich als deterministische TMs simulieren.
+	Jede Turingmaschine lässt sich durch einen endlichen Automaten ersetzen.
+	*Für jede Nichtdeterministische TM existiert eine äquivalente Deterministische TM.
+
+
+
+Die Universelle Turingmaschine U …
+	*kann jede andere TM ⟨M⟩ auf Eingabe w simulieren.
+	nutzt für jede Simulation mindestens drei Bänder.
+	*ist selbst eine (einzelne) Turingmaschine mit Beschreibung ⟨U⟩.
+	kann nur deterministische TMs simulieren. :contentReference[oaicite:4]{index=4}
+
+Die Sprache 𝐴TM definiert das Akzeptanzproblem:
+	*𝐴TM = { (⟨M⟩,⟨w⟩) ∣ M akzeptiert w }.
+	𝐴TM enthält alle Codierungen von TMs.
+	*𝐴TM ist semi-entscheidbar.
+	𝐴TM ist entscheidbar. :contentReference[oaicite:5]{index=5}
+
+Welche Aussage zu 𝐴TM ist **falsch**?
+	𝐴TM ist semi-entscheidbar.
+	𝐴TM ist unentscheidbar.
+	*𝐴TM ist co-semi-entscheidbar.
+	Die Universalmaschine U erkennt 𝐴TM durch Emulation. :contentReference[oaicite:6]{index=6}
+
+Das Halteproblem 𝐻TM := { (⟨M⟩,⟨w⟩) ∣ M terminiert auf w } …
+	*ist unentscheidbar.
+	*kann von U semi-entscheidbar erkannt werden.
+	ist gleich 𝐴TM.
+	ist co-semi-entscheidbar. :contentReference[oaicite:7]{index=7}
+
+Welche Aussagen zur (Co-)Semi-Entscheidbarkeit und Entscheidbarkeit sind korrekt?
+	*Eine Sprache L ist genau dann entscheidbar, wenn L und sein Komplement co-semi-entscheidbar sind.
+	*Co-Semi-entscheidbarkeit bedeutet, dass das Komplement semi-entscheidbar ist.
+	Entscheidbare Sprachen sind weder semi- noch co-semi-entscheidbar.
+	Ein semi-entscheidbares Problem ist stets entscheidbar. :contentReference[oaicite:8]{index=8}
+
+
+
+Eine Reduktion A ≼ B heißt …
+	*A ist auf B reduzierbar, wenn es eine berechenbare Funktion f mit w∈A ⇔ f(w)∈B gibt.
+	Reduktionen dürfen nur endliche Worte umformen.
+	*A polynomialzeit­beschränkte Reduktion heißt A ≼ₚ B.
+	A und B müssen dieselbe Eingabe­alphabetgröße haben. :contentReference[oaicite:9]{index=9}
+
+Was folgt aus A ≼ B und B entscheidbar?
+	*A ist entscheidbar.
+	A ist semi-entscheidbar.
+	*Eine funktionale Reduktion existiert ebenfalls in umgekehrter Richtung.
+	A ist co-semi-entscheidbar. :contentReference[oaicite:10]{index=10}
+
+
+
+Welche Aussagen zum Umfang (Mächtigkeit) von Sprachen treffen zu?
+	*Die Menge aller TMs ist abzählbar.
+	*Die Menge aller Sprachen über Σ={0,1} ist überabzählbar.
 	Alle Sprachen sind entscheidbar.
-	*Entscheidbare Sprachen sind Turing-erkennbar.
-	Turing-erkennbare Sprachen sind alle semi-entscheidbar.
-	Semi-entscheidbare Sprachen sind nicht von Turingmaschinen erkennbar.
+	Es gibt nur abzählbar viele nicht entscheidbare Sprachen. :contentReference[oaicite:11]{index=11}
 
-Was ist ein semi-entscheidbares Problem?
-	*Ein Problem, bei dem ein Algorithmus im Ja-Fall terminiert.
-	Ein Problem, das effizient lösbar ist.
-	Ein Problem, das in allen Fällen terminieren muss.
-	*Ein Problem, bei dem bei „Nein“ eventuell kein Halt erfolgt.
-	Semi-entscheidbar bedeutet, dass alle Turingmaschinen es erkennen.
-
-Welche Aussagen zur Church-Turing-These sind korrekt?
-	Sie ist mathematisch beweisbar.
-	*Sie ist eine informelle Annahme über das, was berechenbar ist.
-	*Sie postuliert, dass alle berechenbaren Funktionen durch Turingmaschinen berechnet werden können.
-	Sie wurde durch Gödel widerlegt.
-	Sie ist äquivalent zu P = NP.
-
-Was ist das Halteproblem?
-	*Die Frage, ob eine Turingmaschine bei einer Eingabe hält.
-	Die Frage, ob ein Algorithmus effizient ist.
-	Ein Problem in P.
-	Ein deterministisches Problem.
-	*Ein Beispiel für ein unentscheidbares Problem.
-
-Welche Aussagen zur Reduktion zwischen Problemen sind korrekt?
-	*Wenn A auf B reduzierbar ist und B entscheidbar ist, dann ist auch A entscheidbar.
-	*Reduktion kann zum Nachweis von Unentscheidbarkeit verwendet werden.
-	Reduktion ist nur für Turingmaschinen definiert.
-	*Man kann Reduktion verwenden, um zu zeigen, dass ein Problem schwerer ist als ein anderes.
-	Reduktionen sind nur im Kontext von P und NP sinnvoll.
-
-Welche Aussagen zu Entscheidbarkeit sind richtig?
-	*Das Leerheitsproblem für Turingmaschinen ist unentscheidbar.
-	*Das Wortproblem für reguläre Sprachen ist entscheidbar.
-	Das Halteproblem für DEA ist unentscheidbar.
-	Die Sprache aller Turingmaschinen, die bei jeder Eingabe halten, ist entscheidbar.
-	Das Problem, ob zwei Turingmaschinen dieselbe Sprache akzeptieren, ist entscheidbar.
+Welche Rückschlüsse aus Lemma 2.2.6 (“es gibt nicht (semi-)entscheidbare Sprachen”) sind korrekt?
+	*Es bleiben überabzählbar viele Sprachen, wenn man alle (semi-)entscheidbaren abzählt.
+	Alle unentscheidbaren Sprachen sind co-semi-entscheidbar.
+	*Die Wahrscheinlichkeit, zufällig eine (semi-)entscheidbare Sprache zu wählen, ist 0.
+	Nur unendliche Sprachen können unentscheidbar sein. :contentReference[oaicite:12]{index=12}

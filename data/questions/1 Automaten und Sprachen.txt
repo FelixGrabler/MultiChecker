@@ -1,60 +1,110 @@
-Welche Aussagen zu DEA sind korrekt?
-	*Ein DEA akzeptiert genau eine Folgezustandsfunktion.
-	*Jeder DEA ist ein Spezialfall eines NEA.
-	Jeder NEA kann effizient in einen DEA umgewandelt werden (ohne exponentiellen Overhead).
-	DEA und NEA akzeptieren unterschiedlich viele Sprachen.
-	DEAs können kontextfreie Sprachen erkennen.
 
-Was beschreibt ein NEA korrekt?
-	*Ein NEA erlaubt mehrere Folgezustände für ein Symbol.
-	Ein NEA erkennt andere Sprachen als ein DEA.
-	*Ein NEA kann mit Epsilon-Übergängen arbeiten.
-	NEAs sind effizienter in der Umsetzung als DEAs.
-	NEAs können keine regulären Sprachen erkennen.
+Welche Aussagen charakterisieren ein Alphabet Σ?
+	*Σ ist eine endliche Menge von Symbolen.
+	*Eine Sprache über Σ ist stets Teilmenge von Σ*.
+	Σ enthält immer das leere Wort ε.
+	Ein Alphabet darf unendlich viele Symbole enthalten.
 
-Was gilt für reguläre Sprachen?
-	*Sie sind durch endliche Automaten erkennbar.
-	*Sie können durch reguläre Ausdrücke beschrieben werden.
-	Sie sind Turing-erkennbar, aber nicht entscheidbar.
-	*Sie sind abgeschlossen unter Vereinigung.
-	Sie sind abgeschlossen unter Komplement nur bei DEA, nicht bei NEA.
+Aussagen zu Wörtern über Σ
+	*Das leere Wort ε hat die Länge 0.
+	*Jedes Wort ist eine endliche Sequenz von Symbolen aus Σ.
+	Die Menge Σ* enthält genau alle Wörter gleicher Länge.
+	Σ* \ {ε} ist per Definition endlich.
 
-Welche Aussagen über das Pumping-Lemma sind korrekt?
-	*Es dient zum Nachweis, dass eine Sprache nicht regulär ist.
-	*Das Pumping-Lemma gilt für alle regulären Sprachen.
-	Es kann verwendet werden, um zu zeigen, dass eine Sprache regulär ist.
-	Es liefert einen Algorithmus zur Konstruktion eines DEA.
-	Das Pumping-Lemma funktioniert nur bei kontextfreien Sprachen.
+Welche Aussagen können auf eine formale Sprache L über einem Alphabet Σ zutreffen?
+	*L ist eine Teilmenge von Σ*.
+	*L kann leer sein.
+	*L kann unendlich viele Wörter enthalten.
+	Jede Sprache enthält das leere Wort ε.
 
-Welche Aussagen über kontextfreie Sprachen (KFS) sind korrekt?
-	*Jede reguläre Sprache ist auch kontextfrei.
-	*Es gibt kontextfreie Sprachen, die nicht regulär sind.
-	Alle kontextfreien Sprachen sind deterministisch erkennbar.
-	Kontextfreie Sprachen sind abgeschlossen unter Schnitt.
-	*Kontextfreie Sprachen sind abgeschlossen unter Konkatenation.
 
-Was ist ein regulärer Ausdruck?
-	*Ein formales Mittel zur Beschreibung regulärer Sprachen.
-	*Ein Ausdruck, der durch Mengenoperationen auf Symbolen aufgebaut ist.
-	Ein Automat, der Eingaben verarbeitet.
-	*Ein Grammatiktyp aus der Chomsky-Hierarchie.
-	Ein Turing-vollständiges Modell.
+Ein deterministischer endlicher Automat (DEA) benötigt …
+	*eine Übergangsfunktion δ : Q × Σ → Q
+	*eine Menge akzeptierender Endzustände F
+	*Ein DEA kann mehrere akzeptierende Endzustände haben.
+	Die Zustandsmenge Q darf unendlich sein.
+	Ein DEA kann mehrere Startzustände haben.
 
-Welche Aussagen zu endlichen Automaten sind korrekt?
-	*Ein endlicher Automat hat eine endliche Anzahl an Zuständen.
-	Endliche Automaten können alle Turing-erkennbaren Sprachen verarbeiten.
-	*Ein DEA kann als Tupel (Q, Σ, δ, q₀, F) definiert werden.
-	*Endliche Automaten verarbeiten Zeichenketten symbolweise.
+Ein DEA akzeptiert ein Wort w, wenn …
+	*nach Verarbeitung des letzten Symbols ein Zustand aus F erreicht ist.
+	*für das leere Wort ε gilt: ε wird genau dann akzeptiert, wenn q₀ ∈ F.
+	alle Zwischenschritte ausschließlich akzeptierende Zustände besuchen.
+	nach Verarbeitung des letzten Symbols kein Folgezustand mehr definiert ist.
 
-Welche Sprache ist nicht regulär?
-	Die Menge aller Wörter mit gerader Länge über {a, b}.
-	*Die Sprache {aⁿbⁿ | n ≥ 0}.
-	Die Menge aller Wörter ohne zwei aufeinanderfolgende b.
-	*Die Sprache L = {ww | w ∈ {a, b}*}.
 
-Was bedeutet Äquivalenz zweier Automaten?
-	Sie haben die gleiche Anzahl an Zuständen.
-	*Sie akzeptieren dieselbe Sprache.
-	Sie sind deterministisch.
-	Sie verwenden dasselbe Eingabealphabet.
-	*Sie akzeptieren genau dieselben Wörter.
+Welche Besonderheiten können bei NEA auftreten?
+	*ε-Übergänge ohne Verbrauch eines Eingabesymbols
+	*Mehrere mögliche Folgezustände für dasselbe Paar (Zustand, Symbol)
+	*Keine möglichen Folgezustände für ein (Zustand, Symbol) Paar
+	Ein NEA kann mehrere Startzustände haben.
+	Jeder Zustand besitzt höchstens einen ausgehenden Übergang.
+	NEA dürfen niemals in Sackgassen-Zustände gelangen.
+
+Äquivalenz von NEA und DEA
+	*Für jeden NEA N gibt es einen DEA M, der dieselbe Sprache erkennt, und umgekehrt.
+	*Jeder DEA kann auch als NEA betrachtet werden.
+	Die Simulation eines NEA durch einen DEA verändert die akzeptierte Sprache.
+	NEA können mehr Sprachen erkennen als DEA.
+
+Umwandlung NEA → DEA
+	*Jeder Zustand des resultierenden DEA repräsentiert eine Menge von NEA-Zuständen.
+	*Im Worst-Case ergeben sich bis zu 2^n Zustände, wenn der NEA n Zustände hat.
+	Jeder neue DEA-Zustand entspricht genau einem Zustand des NEA.
+	*Ein DEA-Zustand ist akzeptierend, sobald er mindestens einen NEA-Endzustand enthält.
+	Ein DEA-Zustand ist akzeptierend, sobald er ausschließlich NEA-Endzustände enthält.
+
+
+Abgeschlossene Operationen regulärer Sprachen
+	*Vereinigung: A ∪ B
+	*Konkatenation: A · B
+	*Kleene-Stern: A*
+	*Komplement: Σ* \ A
+	*Schnitt: A ∩ B
+	*Differenz: A \ B
+	*Reversion (Spiegelung): Aʳ
+
+Aussagekraft regulärer Ausdrücke
+	*Jede durch einen regulären Ausdruck erzeugte Sprache ist regulär.
+	*Die durch reguläre Ausdrücke definierten Sprachen entsprechen genau denen, die von DEAs akzeptiert werden.
+	Nur endliche Sprachen lassen sich durch reguläre Ausdrücke beschreiben.
+	Es gibt reguläre Sprachen ohne regulären Ausdruck.
+
+Wähle alle regulären Sprachen (über Σ={0,1})
+	*{ w | w endet auf 01 }
+	*{ w ∣ w enthält eine gerade Anzahl von 0 }
+	*{ w ∣ w enthält niemals die Teilzeichenfolge "11" }
+	{0^n 1^n | n ≥ 0}
+	{ 0^p | p ist Primzahl }
+	{ 0^{2^n} ∣ n ≥ 0 }
+
+Welche Aussage ist **falsch**?
+	Reguläre Sprachen sind unter Kleene-Stern abgeschlossen (A regulär → A* regulär).
+	Jeder DEA kann als NEA betrachtet werden.
+	*Eine Sprache ist genau dann regulär, wenn sie die Bedingungen des Pumping-Lemmas erfüllt.
+	Zu jedem NEA existiert genau ein äquivalenter DEA.
+
+
+Voraussetzungen des Pumping-Lemmas
+	*|y| > 0
+	*|xy| ≤ p (Pumping-Konstante)
+	*xyᵐz liegt für alle m ≥ 0 in A
+	*das gewählte Wort w muss in A sein.
+	*|w| ≥ p (Länge des Wortes)
+	|w| < p (Länge des Wortes)
+	x, y, z ∈ A (der Sprache) müssen gelten
+
+Aussagen zum Einsatz des Pumping-Lemmas
+	*Eignet sich zum Nachweis „Sprache ist **nicht** regulär“.
+	Eignet sich zum Nachweis „Sprache ist regulär“.
+	*Trifft bei jeder regulären Sprache zu.
+
+Welche Schlussfolgerungen sind korrekt?
+	*Erfüllt eine Sprache die Pumping-Eigenschaft, kann sie trotzdem nicht regulär sein.
+	Erfüllt eine Sprache die Pumping-Eigenschaft nicht, ist sie regulär.
+	*Die Pumping-Eigenschaft ist eine notwendige, aber keine hinreichende Bedingung für Regulärität.
+
+Kombination von Eigenschaften regulärer Sprachen
+	*Sind A und B regulär, so ist A ∪ B regulär.
+	A ∩ B ist regulär nur, wenn sowohl A als auch B endlich sind.
+	*Sind A und B regulär, so ist A ∘ B regulär.
+	(A*)* kann unregulär sein.
