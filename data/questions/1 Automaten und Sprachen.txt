@@ -76,10 +76,10 @@ Wähle alle regulären Sprachen (über Σ={0,1})
 	{ 0^p | p ist Primzahl }
 	{ 0^{2^n} ∣ n ≥ 0 }
 
-Welche Aussage ist **falsch**?
-	Reguläre Sprachen sind unter Kleene-Stern abgeschlossen (A regulär → A* regulär).
-	Jeder DEA kann als NEA betrachtet werden.
-	*Eine Sprache ist genau dann regulär, wenn sie die Bedingungen des Pumping-Lemmas erfüllt.
+Welche Aussage ist **richtig**?
+	*Reguläre Sprachen sind unter Kleene-Stern abgeschlossen (A regulär → A* regulär).
+	*Jeder DEA kann als NEA betrachtet werden.
+	Eine Sprache ist genau dann regulär, wenn sie die Bedingungen des Pumping-Lemmas erfüllt.
 	Zu jedem NEA existiert genau ein äquivalenter DEA.
 
 
