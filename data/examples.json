@@ -10,6 +10,16 @@
     "solution": "solution2.png"
   },
   {
+    "title": "Pumping Lemma 1",
+    "task": "question-pl-1.png",
+    "solution": "answer-pl-1.png"
+  },
+  {
+    "title": "Pumping Lemma 2",
+    "task": "question-pl-2.png",
+    "solution": "answer-pl-2.png"
+  },
+  {
     "title": "Entscheidbarkeit Reduktion 1",
     "task": "question-reduction-language_of_size_1.png",
     "solution": "answer-reduction-language_of_size_1.png"

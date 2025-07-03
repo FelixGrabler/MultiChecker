@@ -36,5 +36,13 @@
   {
     "question": "Wie schaut die Turingmaschine mit folgender Konfiguration aus: (aq₃bc)? q₃ ist der aktuelle Zustand.",
     "image": "tm_configuration.png"
+  },
+  {
+    "question": "Definiere Reduktion der Sprache A auf die Sprache B.",
+    "image": "reduction-definition.png"
+  },
+  {
+    "question": "Definiere Polynomzeit Reduktion der Sprache A auf die Sprache B.",
+    "image": "polyreduction-definition.png"
   }
 ]
