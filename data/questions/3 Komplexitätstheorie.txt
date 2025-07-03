@@ -14,7 +14,6 @@ Zeitkostenfunktion einer TM M
 Simulationsaufwand nichtdeterministischer TMs
 	*Eine k-Band-NTM mit Laufzeit fₙ(n) lässt sich durch eine 1-Band-TM mit Laufzeit 2^O(fₙ(n)) simulieren.
 	NTM-Laufzeit fₙ(n) wird ohne Overhead übernommen.
-	*Der 3-Band-Simulator läuft in 2·O(fₙ(n))^2 Zeitschritten.
 	Simulation einer NTM erfordert niemals mehr als fₙ(n) Schritte.
 
 
@@ -92,16 +91,16 @@ Konsequenzen korollar 3.4.7
 
 
 Beziehungsdiagramm P, NP, EXP
-	*P ⊆ NP ⊆ EXP und P ⊊ EXP.
-	NP = EXP bekannt offen.
-	*P ⊊ NP folgt aus P⊆NP und P≠NP.
-	EXP ⊆ NP, da NTMs simuliert werden können.
+	*P ⊆ NP
+	*NP ⊆ EXP
+	P ⊆ EXP
+	NP ⊆ P.
+	NP = EXP.
 
 Welche Aussage trifft zu?
-	Wenn NP⊆P, dann P=NP.
 	*Falls SAT∈P, folgt P=NP.
-	Wenn P=EXP, dann NP⊊P.
-	Wenn 3SAT∉NP, dann SAT∈co-NP.
+	*Falls P=NP, folgt NP≠EXP.
+	*Falls NP=EXP, dann folgt P≠NP.
 
 Abschätzungen
 	*Eine 2-Band-TM kann eine quadratische-Zeit-TM auf O(n) beschleunigen.
