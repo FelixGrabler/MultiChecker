@@ -23,5 +23,15 @@
     "title": "Entscheidbarkeit Reduktion 3",
     "task": "question-reduction-reversed.png",
     "solution": "answer-reduction-reversed.png"
+  },
+  {
+    "title": "Polynom Reduktion 1",
+    "task": "question-polyreduction-simplex.png",
+    "solution": "answer-polyreduction-simplex.png"
+  },
+  {
+    "title": "Polynom Reduktion 2",
+    "task": "question-polyreduction-uhampath.png",
+    "solution": "answer-polyreduction-uhampath.png"
   }
 ]
