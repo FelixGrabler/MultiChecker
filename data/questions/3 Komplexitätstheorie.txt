@@ -44,11 +44,11 @@ Verifizierer-Charakterisierung von NP
 	*NP = ⋃_k≥1 NTIME(nᵏ).
 	NTIME(nᵏ) ⊆ P.
 
-Beispiele in NP
-	*HAMPATH = {(G,s,t) ∣ G enthält Hamilton-Pfad von s nach t} ∈ NP.
-	*PATH ∈ NP.
-	*SAT und 3SAT ∈ NP.
-	*Graph-Clique ∈ NP.
+Welche Sprachen sind in NP und nicht in P?
+	*HAMPATH = {(G,s,t) ∣ G enthält Hamilton-Pfad von s nach t}
+	PATH
+	*SAT und 3SAT
+	*Graph-Clique
 
 Welche Aussage ist falsch?
 	P ⊆ NP.
