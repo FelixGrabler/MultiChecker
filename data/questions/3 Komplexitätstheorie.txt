@@ -100,29 +100,17 @@ Beziehungsdiagramm P, NP, EXP
 Welche Aussage trifft zu?
 	*Falls SAT∈P, folgt P=NP.
 	*Falls P=NP, folgt NP≠EXP.
-	*Falls NP=EXP, dann folgt P≠NP.
 
 Abschätzungen
 	*Eine 2-Band-TM kann eine quadratische-Zeit-TM auf O(n) beschleunigen.
-	Einige Probleme in P bleiben Ω(2ⁿ).
 	*Eine k-Band-Simulation verursacht höchstens polynomialen Overhead.
 	Simulation einer Multi-Band-TM auf 1-Band verliert nicht mehr als log-Faktor.
 
-Grenzen von NP-Techniken
-	*Pumping-Lemma kann Nicht-Untersuchungen für NP-Sprachen nicht beweisen.
-	Reduktion zeigt nur NP-Schwere, nicht Nicht-Entscheidbarkeit.
-	*Relativierung und Algebrasindizien beschränken Beweismethoden für P≠NP.
-	Cook-Levin liefert konstruktive Zertifikate.
-
 Verifikation vs. Entscheidung
-	*Verifizieren (NP) ist oft einfacher als Finden (P vs. NP).
-	Alle P-Algorithmen lassen sich als Verifizierer einsetzen.
-	*Ein Verifizierer ignoriert das Zertifikat vollständig.
-	Ein Entscheidungsalgorithmus kann nicht als Verifizierer dienen.
+	*Jeder Algorithmus in P kann als NP-Verifizierer für sich selbst dienen.
+	Verifizieren (NP) ist stets schwieriger als eine Lösung zu finden.
+	*Ein Verifizierer V akzeptiert (w,c) genau dann, wenn c ein gültiges Zertifikat für w ist.
 
-Single‐Choice zur Simulation
-	Eine NTM mit Laufzeit f(n) lässt sich simulieren durch:
+Single‐Choice zur Simulation; Eine NTM mit Laufzeit f(n) lässt sich simulieren durch:
 	Ein-Band-TM mit Laufzeit O(f(n)).
 	*Ein-Band-TM mit Laufzeit 2^O(f(n)).
-	k-Band-TM mit Laufzeit f(n)·k.
-	Eine deterministische RAM-Maschine mit O(log n) Overhead.
