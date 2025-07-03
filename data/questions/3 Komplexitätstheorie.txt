@@ -67,26 +67,26 @@ Polynomzeit-Reduktion A ≼ₚ B bedeutet …
 
 NP-Schwere und NP-Vollständigkeit
 	*B NP-hart ⇔ ∀A∈NP: A ≼ₚ B.
-	B NP-vollständig ⇔ B∈NP und B NP-hart.
+	*B NP-vollständig ⇔ B∈NP und B NP-hart.
 	*B NP-vollständig und B∈P ⇒ P=NP.
 	NP-harte Probleme sind immer entscheidbar.
 
 Satz von Cook-Levin
 	*SAT ist NP-vollständig.
-	3SAT ∉ NP.
+	3SAT ∈ P.
 	*Jede Sprache in NP lässt sich in poly. Zeit auf SAT reduzieren.
-	Ursprungssatz gilt nur für 2SAT.
 
-Typische NP-vollständige Probleme
-	*CLIQUE, SAT, 3SAT, Hamilton-Pfad, Vertex Cover.
-	PATH, HAMPATH und 2SAT sind NP-vollständig.
-	*SIMPLEX aus Bonusübung ist NP-vollständig (gerichtete Clique).
-	Berechenbarkeitsprobleme wie ATM sind NP-vollständig.
+Wählen Sie die NP‐vollständigen Probleme aus:
+	*SAT
+	*CLIQUE
+	*Hamilton-Pfad
+	PATH
+	Halteproblem
 
 Konsequenzen korollar 3.4.7
 	*Ist B NP-schwer, B ≼ₚ C und C∈NP, so ist C NP-vollständig.
-	NP-Schwere überträgt sich nicht durch Reduktion.
-	*Transitivität von ≼ₚ hält die NP-Schwere.
+	*NP-Schwere überträgt sich durch Reduktion.
+	*Transitivität von ≼ₚ hält die NP-Schwere
 	Jede Sprache in NP ist NP-vollständig.
 
 
