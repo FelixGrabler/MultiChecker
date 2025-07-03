@@ -41,7 +41,7 @@ Beispiel PATH
 Verifizierer-Charakterisierung von NP
 	*NP = {A ∣ ∃ Verifizierer V, w∈A ⇔ ∃ c: V akzeptiert (w,c) in poly. Zeit}.
 	NP = TIME(nᵏ) für k>1.
-	*NP = ⋃ₖ≥1 NTIME(nᵏ).
+	*NP = ⋃_k≥1 NTIME(nᵏ).
 	NTIME(nᵏ) ⊆ P.
 
 Beispiele in NP
