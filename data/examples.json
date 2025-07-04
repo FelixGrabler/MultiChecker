@@ -43,5 +43,10 @@
     "title": "Polynom Reduktion 2",
     "task": "question-polyreduction-uhampath.png",
     "solution": "answer-polyreduction-uhampath.png"
+  },
+  {
+    "title": "P vs NP",
+    "task": "question-conp.png",
+    "solution": "answer-conp.png"
   }
 ]
